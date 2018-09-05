@@ -1,0 +1,626 @@
+/*------ PADRONIZAÇÃO DOS ELEMENTOS DAS PÁGINAS, COMO LETRA, TAMANHO, LINKS -------*/
+html, body, span, p, form, img, a, ul, ol, li, table, tr, td, div{
+margin: 0;
+padding: 0; 
+border:none; 
+outline:none;
+list-style-type:none;
+}
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    
+}
+
+
+a:hover,
+a:focus,
+a:active {
+    color: #c0c0c0;
+}
+a:link 
+{ 
+ text-decoration:none; 
+} 
+h1,
+h3,
+p,
+a,
+div,
+li {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    color: #324252;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #324252;
+}
+
+p {
+    font-size: 1rem;
+    color: #2E2E2E;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+/*------ PADRONIZAÇÃO DOS ELEMENTOS DAS PÁGINAS, COMO LETRA, TAMANHO, LINKS -------*/
+
+
+
+
+/*------ DIV DO CORPO DA PÁGINA. SUA FUNÇÃO É MELHOR DISTRIBUIR OS ELEMENTOS DA PÁGINA -------*/
+#wrap {
+    height: auto !important;
+    position:relative;
+    width:100%;
+    margin: 0 auto;
+    min-height: 100%
+}
+/*------ DIV DO CORPO DA PÁGINA. SUA FUNÇÃO É MELHOR DISTRIBUIR OS ELEMENTOS DA PÁGINA -------*/
+
+
+/*-----O MENU DO USUÁRIO É CONFIGURADO AQUI -------*/
+#menuusuario {
+    width: 100%;
+    margin: 0;
+    height: 3rem;
+    padding: 0 0 0 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    background-color: #e6e6e6;
+    box-shadow: 0 2px 1px #9c9c9c;
+}
+
+#menuusuario input
+{
+    padding-left: 1rem;
+    width: 20rem;
+    height: 2rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    margin-left: 3%;
+    font-size: 0.8rem;
+    font-family: 'Verdana';
+    outline: none;
+}
+
+#menuusuario input:focus
+{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    width: 30rem;
+    transition: width 0.5s
+}
+
+.submenu {
+    position: relative;
+    display: inline-block;
+}
+
+.nome
+{
+    float: right;
+    margin-right: 1.5rem;
+    padding-top: 1.2%;
+}
+.submenu img:hover, .submenu img:visited
+{
+    opacity: 0.5;
+}
+
+.submenu:focus {
+    pointer-events: none;
+}
+
+.submenu:focus .submenu-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu-content {
+    pointer-events: auto;
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+
+.submenu.no-pointer-events {
+    pointer-events: auto !important;
+}
+
+.submenu.no-visibility .submenu-content {
+    visibility: visible !important;
+    display: none;
+}
+
+.submenu.no-visibility:focus .submenu-content {
+    display: block;
+}
+
+.submenu.no-opacity .submenu-content {
+    opacity: 1 !important;
+}
+
+
+.submenu {
+    padding: 0;
+    margin-top: 0.3rem;
+    float: right;
+    margin-right: 3rem;
+    outline: 0;
+}
+.submenu:before {
+    
+    background-color: #94a4a5;
+}
+.submenu-content {
+    background-color: #364656;
+    width: auto;
+    margin-left: -4rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+/* SETA DO MENU */
+.submenu-content:before {
+    content: "";
+    width: 0;
+    height: 0;
+
+    border-bottom: 10px solid #364656;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    position: absolute;
+    top: -10px;
+    left: 4.4rem;
+}
+
+.submenu-content li {
+    color: #ffffff;
+    list-style-type: none;
+    white-space: nowrap;
+
+}
+
+.submenu-content a
+{
+    color: #ffffff;
+    float: center;
+
+}
+
+.submenu-content a:hover,
+.submenu-content a:focus,
+.submenu-content a:active {
+    color: #c0c0c0;
+}
+.submenu-content a:link 
+{ 
+ text-decoration:none; 
+} 
+.submenu-content a{
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+}
+
+/* style the buttons */
+.submenu-content button {
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: inherit;
+    outline: 0;
+    margin-top:-3px;
+    margin-left: -9px;
+    cursor: pointer;
+}
+/*-----O MENU DO USUÁRIO É CONFIGURADO AQUI -------*/
+
+
+
+
+
+/*-----O MENU LATERAL PARA USUÁRIO É CONFIGURADO AQUI -------*/
+#menulateral {
+    height: 100%;
+        width: 19%;
+     padding: 0;
+     padding-top: 0.18%;
+     position: absolute;
+        float: left;
+        }
+
+
+#menulateral a
+{
+    font-family: 'Lato', sans-serif;
+    color: #0d0d0d;
+}
+
+#menulateral ul li {
+        margin: 0; padding: 0px;
+        border-bottom: 1px solid #CCC;
+        text-align: left;
+        list-style-type: none;
+        }
+#menulateral a:link {
+        background: #ffffff;
+        color: #666;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 1rem;
+        display: block;
+        }
+
+#menulateral a:hover {
+        background: #E5F0FF;
+        color: #039;
+        }
+
+/*-----O MENU LATERAL PARA USUÁRIO É CONFIGURADO AQUI -------*/
+
+
+/*-----O TEXTO PARA USUÁRIO COM O MENU LATERAL AO LADO É CONFIGURADO AQUI -------*/
+.textousuario
+{
+    
+    margin-left: 19.1%; border: 1px solid #CCC;
+    width: 75%;
+    padding-left: 5%; padding-top: 1%;
+}
+
+.textousuario input
+{
+    margin-bottom: 1%;
+    
+}
+
+ .textousuario p
+ {
+    margin-bottom: 1%;
+ }
+
+.textousuario a:hover,.textousuario a:focus,.textousuario a:active {
+    color: #c0c0c0;
+}
+
+.textousuario h1,
+.textousuario h3,
+.textousuario p,
+.textousuario a,
+.textousuario div,
+.textousuario li {
+    font-family: 'Lato', sans-serif;
+    color: #2E2E2E;
+
+}
+
+
+.textousuario input
+{
+    width: 25rem;
+    height: 1.7rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-family: 'Verdana';
+    padding: 0 0 0 0.5rem;
+    outline: none;
+}
+.textousuario input:focus
+{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    transition: width 0.5s
+}
+
+.textousuario button
+{
+    width: 100%;
+    height: 2.3rem;
+    box-sizing: border-box;
+    border: none;
+    background: #143E5B;
+    font-size: 1rem;
+    font-family: 'Verdana';
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.textousuario button:hover
+{
+    background: #869DAD;
+}
+/*-----O TEXTO PARA USUÁRIO COM O MENU LATERAL AO LADO É CONFIGURADO AQUI -------*/
+
+
+
+/*----- AS TABELAS (RANKING, ÍNDICES) SÃO CONFIGURADAS AQUI, EXCETO A DE RELATÓRIOS -------*/
+.tabusuario
+{
+    /*box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);*/
+    width: 90%;
+    text-align: center;
+    border: 1px solid #143E5B;
+    border-collapse: collapse;
+}
+
+.tabusuario th
+{
+    border: 1px solid #143E5B;
+    border-collapse: collapse;
+    padding: 0.4rem;
+}
+
+.tabusuario td
+{
+    border: 1px solid #143E5B;
+    border-collapse: collapse;
+    padding: 0.4rem;
+    text-align: left;
+}
+
+.tabusuario button
+{
+    
+    width: 85%;
+    height: 2.3rem;
+    margin-left: 1rem;
+    box-sizing: border-box;
+    border: none;
+    background: #143E5B;
+    font-size: 1rem;
+    font-family: 'Verdana';
+}
+
+.tabusuario button:hover {
+    background: #869DAD;
+}
+/*----- AS TABELAS (RANKING, ÍNDICES) SÃO CONFIGURADAS AQUI, EXCETO A DE RELATÓRIOS -------*/
+
+
+.caixasresultados
+{
+    margin-left: 11.5%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); 
+    border: 1px solid #143E5B; 
+    width: 23rem;
+    text-align: center;
+    color: #324252;
+}
+
+.caixasresultados button
+{
+    width: 100%;
+    height: 2.3rem;
+    box-sizing: border-box;
+    border: none;
+    background: #143E5B;
+    font-size: 1rem;
+    font-family: 'Verdana';
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.caixasresultados button:hover {
+    background: #869DAD;
+}
+
+/*----- A TABELA DE RELATÓRIO É CONFIGURADA -----*/
+.tabs {
+    width:95%;
+    display:inline-block;
+    height: auto;
+}
+ 
+    /*----- Tab Links -----*/
+    
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:1rem 1rem;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#324252;
+            text-decoration:none;
+        }
+ 
+    .tab-links li.active a,.tab-links li.active, .tab-links a:hover {
+        background:#2E2E2E;
+        color:#4c4c4c;
+      }
+      .tab-links li.active a, .tab-links a:hover
+      {
+        color: #ffffff;
+      }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+
+        background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block; 
+
+        }
+/*----- A TABELA DE RELATÓRIO É CONFIGURADA -----*/
+
+
+/*---- PADRONIZAÇÃO DAS DIVS DE CADASTRO -------*/
+.formcadastro
+{
+    border: 1px solid #143E5B;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    width: 15rem;
+    height: 17rem;
+    position: relative;
+    display: inline-block;
+    margin-left: 11.5%;
+}
+
+.formcadastro button
+{
+    margin-top: 1rem;
+    position: absolute;
+    width: 85%;
+    height: 2.3rem;
+    margin-left: 1rem;
+    box-sizing: border-box;
+    border: none;
+    background: #143E5B;
+    font-size: 1rem;
+    font-family: 'Verdana';
+    color: #fff;
+}
+
+.formcadastro button:hover {
+    background: #869DAD;
+}
+
+.formcadastro p
+{
+    margin: 1rem;
+}
+
+.formcadastro h3
+{
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.formcadastro input
+{
+    height: 2.3rem;
+    width: 85%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 1rem;
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-family: 'Verdana';
+    outline: none;
+}
+
+/*---- PADRONIZAÇÃO DAS DIVS DE CADASTRO -------*/
+
+/*------ DIV PARA TEXTO. NELA ALINHA-SE O TEXTO NA BORDA ESQUERDA DA PÁGINA -------*/
+.texto
+{
+    width: 80%;
+    margin-left: 11.5%;
+}
+
+.texto button {
+    width: 10%;
+    height: 2rem;
+    background: #143E5B;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    border-radius: 0px;
+    border: 1px solid #143E5B;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Verdana';
+    outline: none;
+    cursor: pointer;
+}
+/*------ DIV PARA TEXTO. NELA ALINHA-SE O TEXTO NA BORDA ESQUERDA DA PÁGINA -------*/
+
+/*------ ESTILIZAÇÃO DO OPTION(SELECT) DEIXANDO-O SEM SETA -------*/
+.select-wrapper{
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */        
+        float: left;
+        display: inline-block;
+        border: 1px solid #d8d8d8;
+        background: url("/imgs/dropdown.png") no-repeat right center;
+    }
+    .select-wrapper, .select-wrapper select{
+        width: 25rem;
+        height: 1.7rem;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        font-family: 'Verdana';
+        padding: 0 0 0 0.5rem;
+        outline: none;
+    }
+    .select-wrapper:hover{
+        background: url("/imgs/dropdown-hover.png") no-repeat right center;
+        border-color: #239fdb;
+    }
+    .select-wrapper .holder{
+        margin: 0 35px 0 5px;
+        /*white-space: nowrap;*/        
+        
+    }
+    .select-wrapper select{
+        margin: 0;
+        position: absolute;
+        z-index: 2;            
+        cursor: pointer;
+        outline: none;
+        opacity: 0;
+        /* CSS hacks for older browsers */
+        _noFocusLine: expression(this.hideFocus=true); 
+        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -khtml-opacity: 0;
+        -moz-opacity: 0;
+    }
+/*------ ESTILIZAÇÃO DO OPTION(SELECT) DEIXANDO-O SEM SETA -------*/
+
